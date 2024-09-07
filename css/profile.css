@@ -1,0 +1,177 @@
+@import url(./responsive.css);
+:root {
+  --naviBlue: #273c66;
+  --yellow: #f4bf00;
+  --dark: #111111;
+  --orange: #ff5421;
+  --white: #ffffff;
+  --lightGray: #f4f6f5;
+}
+a {
+  color: var(--dark);
+}
+.contents {
+  display: none;
+}
+#profile {
+  background-image: url(../img/profile.jpg);
+  height: 70vh;
+  background-position: top;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.top {
+  background-color: transparent;
+  color: var(--white);
+  padding: 12px 10px;
+}
+
+.topright button {
+  border-radius: 50px;
+  background-color: var(--orange);
+  color: var(--white);
+}
+.topright button a {
+  color: var(--white);
+}
+.top {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navBar {
+  top: 20px;
+}
+.note {
+  position: absolute;
+  top: 10rem;
+  left: 42rem;
+  margin: 0 auto;
+}
+.note h3 {
+  font-size: 60px;
+  color: var(--white);
+}
+.note h4 {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  color: var(--white);
+}
+.note a {
+  color: var(--white);
+}
+
+.note a:hover {
+  color: var(--orange);
+  transition: 0.3s;
+}
+.loginSection {
+  position: relative;
+
+  height: 100vh;
+}
+.loginCart {
+  position: absolute;
+  padding: 20px 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 450px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: 0.4s;
+}
+.loginCart:hover {
+  filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, 0.2));
+}
+.form label {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.loginCart h2 {
+  font-size: 30px;
+  color: var(--naviBlue);
+  margin-bottom: 20px;
+}
+.loginCart ul li {
+  list-style: none;
+}
+.form {
+  margin: 0 0 20px 0;
+}
+.pass {
+  position: relative;
+}
+li.form input {
+  width: calc(100% - 50px);
+  padding: 15px 9px;
+  border: 1px solid var(--lightGray);
+  margin: 10px 0;
+  outline: none;
+}
+li.form input:focus {
+  border: 1px solid var(--orange);
+  transition: 0.4s;
+}
+
+#show {
+  position: absolute;
+  top: 23px;
+  cursor: pointer;
+  right: 60px;
+  font-size: 20px;
+}
+
+.loginCart button {
+  background: var(--orange);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.loginCart a {
+  display: block;
+  font-size: 18px;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  animation: rotate-animation 2s infinite linear;
+}
+@keyframes rotate-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(280deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 600px) {
+  .note {
+    position: absolute;
+    top: 12rem;
+    left: 140px;
+    margin: 0 auto;
+  }
+  .note a {
+    color: var(--lightGray);
+  }
+  .note a:hover {
+    color: var(--orange);
+    transition: 0.3s;
+  }
+}
